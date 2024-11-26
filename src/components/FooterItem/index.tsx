@@ -14,10 +14,10 @@ const FooterItem = ({ src, name, iconPath }: IFooterItemProps) => {
   return (
     <a
       href={src}
-      className="FooterItem-link"
-      style={{
-        color: `${isDarkMode ? "#fff" : "#000"}`,
-      }}
+      className={`FooterItem-link ${isDarkMode && "darkMode"}`}
+      // style={{
+      //   color: `${isDarkMode ? "#fff" : "#000"}`,
+      // }}
     >
       <svg width="32" height="32" fill={isDarkMode ? "#fff" : "#000"}>
         {iconPath.map((path, index) => (
